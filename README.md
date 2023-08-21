@@ -1,84 +1,75 @@
-# Module-5-Challenge
+# Matplotlib-Challenge: Pymaceuticals SCC Study Analysis
+Welcome to the Matplotlib Challenge, a class assignment for my Data Analytics BootCamp at Washignton University. In this project, I will analyze the results of an animal study by Pymaceuticals. The study is focused on potential treatments for squamous cell carcinoma (SCC), a common type of skin cancer. The task is to perform a comprehensive analysis of the study's data and generate essential tables and figures for the technical report. This project will showcase data analytics skills and ability to derive meaningful insights from complex data.
 
-Background
-You've just joined Pymaceuticals, Inc., a new pharmaceutical company that specializes in anti-cancer medications. Recently, it began screening for potential treatments for squamous cell carcinoma (SCC), a commonly occurring form of skin cancer.
+### Background
+The Pymaceuticals, Inc., a new pharmaceutical company that specializes in anti-cancer medications; recently began screening for potential treatments for squamous cell carcinoma (SCC), a commonly occurring form of skin cancer.
+In this study, 249 mice who were identified with SCC tumors received treatment with a range of drug regimens. Over the course of 45 days, tumor development was observed and measured. The purpose of this study was to compare the performance of Pymaceuticals’ drug of interest, Capomulin, against the other treatment regimens.
 
-As a senior data analyst at the company, you've been given access to the complete data from their most recent animal study. In this study, 249 mice who were identified with SCC tumors received treatment with a range of drug regimens. Over the course of 45 days, tumor development was observed and measured. The purpose of this study was to compare the performance of Pymaceuticals’ drug of interest, Capomulin, against the other treatment regimens.
+The executive team needs all of the tables and figures for the technical report of the clinical study and a top-level summary of the study results. 
 
-The executive team has tasked you with generating all of the tables and figures needed for the technical report of the clinical study. They have also asked you for a top-level summary of the study results.
+### Tasks
+1. Prepare the Data
+Import required packages and data files.
+Merge mouse_metadata and study_results DataFrames into one.
+Identify unique mice IDs and check for duplicate time points.
+Remove data associated with any mouse ID having duplicate time points.
 
-Files
-Download the following files to help you get started:
+2. Generate Summary Statistics
+Create a DataFrame containing summary statistics for each drug regimen.
+Include statistics such as mean, median, variance, standard deviation, and SEM of tumor volume.
 
-Module 5 Challenge filesLinks to an external site.
+3. Create Bar and Pie Charts
+Generate two sets of bar charts displaying the total number of rows (Mouse ID/Timepoints) for each drug regimen throughout the study.
+Produce two pie charts illustrating the distribution of female and male mice in the study.
 
-Instructions
-This assignment is broken down into the following tasks:
+![image](https://github.com/agorvie/Matplotlib-Challenge/assets/122469792/6cdcc6eb-7a01-437b-9b2a-7e3d11407b4e)
 
-Prepare the data.
+![image](https://github.com/agorvie/Matplotlib-Challenge/assets/122469792/66fb1625-b177-4d3b-a5bf-adb397d884d8)
 
-Generate summary statistics.
+4. Calculate Quartiles, Find Outliers, and Create Box Plot
+Calculate final tumor volumes for selected treatment regimens (Capomulin, Ramicane, Infubinol, and Ceftamin).
+Compute quartiles, IQR, and identify potential outliers.
+Generate a box plot showcasing the distribution of final tumor volumes for each treatment group, highlighting outliers.
 
-Create bar charts and pie charts.
+![image](https://github.com/agorvie/Matplotlib-Challenge/assets/122469792/edbfb685-af29-45a7-8506-21ae1553c3bc)
 
-Calculate quartiles, find outliers, and create a box plot.
+5. Create Line Plot and Scatter Plot
+Create a line plot demonstrating tumor volume vs. time point for a single mouse treated with Capomulin.
+Generate a scatter plot depicting the relationship between mouse weight and average observed tumor volume for the Capomulin regimen.
 
-Create a line plot and a scatter plot.
+![image](https://github.com/agorvie/Matplotlib-Challenge/assets/122469792/a45ac0c7-033c-4789-80c0-a34ceda2191f)
 
-Calculate correlation and regression.
+![image](https://github.com/agorvie/Matplotlib-Challenge/assets/122469792/22533049-5cf6-4c5a-9bca-de93566ea3d0)
 
-Submit your final analysis.
+6. Calculate Correlation and Regression
+Calculate the correlation coefficient between mouse weight and average tumor volume.
+Perform linear regression analysis to model the relationship between mouse weight and tumor volume.
+Plot the linear regression model over the scatter plot.
 
-Prepare the Data
-Run the provided package dependency and data imports, and then merge the mouse_metadata and study_results DataFrames into a single DataFrame.
+![image](https://github.com/agorvie/Matplotlib-Challenge/assets/122469792/a4d70d3b-67dc-4f29-8628-2bf45666f367)
 
-Display the number of unique mice IDs in the data, and then check for any mouse ID with duplicate time points. Display the data associated with that mouse ID, and then create a new DataFrame where this data is removed. Use this cleaned DataFrame for the remaining steps.
+Correlation coefficient: 0.84
 
-Display the updated number of unique mice IDs.
+Slope: 0.95
 
-Generate Summary Statistics
-Create a DataFrame of summary statistics. Remember, there is more than one method to produce the results you're after, so the method you use is less important than the result.
+Intercept: 21.55
 
-Your summary statistics should include:
+R-value: 0.84
 
-A row for each drug regimen. These regimen names should be contained in the index column.
+P-value: 0.00
 
-A column for each of the following statistics: mean, median, variance, standard deviation, and SEM of the tumor volume.
+Standard error: 0.13
 
-Create Bar Charts and Pie Charts
-Generate two bar charts. Both charts should be identical and show the total total number of rows (Mouse ID/Timepoints) for each drug regimen throughout the study.
+## Analysis Summary:
+Given that correlation coefficient measures the strength and direction of the linear relationship between two variables,the correlation coefficient value of 0.84 indicates a strong positive correlation between mouse weight and average tumor volume for the Capomulin regimen. This means that as mouse weight increases, the average tumor volume tends to increase as well.
 
-Create the first bar chart with the Pandas DataFrame.plot() method.
+The slope of the linear regression line represents the change in the average tumor volume for each unit increase in mouse weight. In this case, the positive slope of the linear regression line (calculated as 0.95) indicates that for every 1 gram increase in mouse weight, the average tumor volume increases by 0.95 mm3.
 
-Create the second bar chart with Matplotlib's pyplot methods.
+The intercept of the linear regression line (calculated as 21.55) represents the estimated average tumor volume when mouse weight is 0 grams. However, since it is not possible to have a mouse with 0 grams weight, the intercept may not have a meaningful interpretation in this context.
 
-Generate two pie charts. Both charts should be identical and show the distribution of female versus male mice in the study.
+The p-value (calculated as 0.00) is a measure of the statistical significance of the linear regression model. In this case, a p-value of 0.00 indicates that the linear regression model is highly statistically significant, suggesting that there is a significant linear relationship between mouse weight and average tumor volume for the Capomulin regimen.
 
-Create the first pie chart with the Pandas DataFrame.plot() method.
+A lower standard error indicates a more precise estimate of the slope. In this case, a standard error of 0.13 suggests a relatively low variability and a relatively precise estimate of the slope in the Capomulin regimen.
 
-Create the second pie chart with Matplotlib's pyplot methods.
+However, it’s important to note that correlation does not imply causation, and other factors may also be influencing the relationship between mouse weight and tumor volume. Further analysis and experimentation would be needed to establish causality and make definitive conclusions.
 
-Calculate Quartiles, Find Outliers, and Create a Box Plot
-Calculate the final tumor volume of each mouse across four of the most promising treatment regimens: Capomulin, Ramicane, Infubinol, and Ceftamin. Then, calculate the quartiles and IQR, and determine if there are any potential outliers across all four treatment regimens. Use the following substeps:
-
-Create a grouped DataFrame that shows the last (greatest) time point for each mouse. Merge this grouped DataFrame with the original cleaned DataFrame.
-
-Create a list that holds the treatment names as well as a second, empty list to hold the tumor volume data.
-
-Loop through each drug in the treatment list, locating the rows in the merged DataFrame that correspond to each treatment. Append the resulting final tumor volumes for each drug to the empty list.
-
-Determine outliers by using the upper and lower bounds, and then print the results.
-
-Using Matplotlib, generate a box plot that shows the distribution of the final tumor volume for all the mice in each treatment group. Highlight any potential outliers in the plot by changing their color and style.
-
-hint: All four box plots should be within the same figure. Use this Matplotlib documentation pageLinks to an external site. for help with changing the style of the outliers.
-
-Create a Line Plot and a Scatter Plot
-Select a single mouse that was treated with Capomulin, and generate a line plot of tumor volume versus time point for that mouse.
-
-Generate a scatter plot of mouse weight versus average observed tumor volume for the entire Capomulin treatment regimen.
-
-Calculate Correlation and Regression
-Calculate the correlation coefficient and linear regression model between mouse weight and average observed tumor volume for the entire Capomulin treatment regimen.
-
-Plot the linear regression model on top of the previous scatter plot.
