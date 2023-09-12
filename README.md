@@ -1,5 +1,5 @@
 # Analyzing SCC Treatment Study by Pymaceuticals
-Welcome to the Matplotlib Challenge, a class assignment for my Data Analytics BootCamp at Washignton University. In this project, I will analyze the results of an animal study by Pymaceuticals. The study is focused on potential treatments for squamous cell carcinoma (SCC), a common type of skin cancer. The task is to perform a comprehensive analysis of the study's data and generate essential tables and figures for the technical report. This project will showcase data analytics skills and ability to derive meaningful insights from complex data.
+Welcome to my analysis of SCC Treatment Study by Pymaceuticals; a class assignment for my Data Analytics BootCamp at Washignton University. In this project, I will analyze the results of an animal study by Pymaceuticals. The study is focused on potential treatments for squamous cell carcinoma (SCC), a common type of skin cancer. The task is to perform a comprehensive analysis of the study's data and generate essential tables and figures for the technical report. This project will showcase data analytics skills and ability to derive meaningful insights from complex data.
 
 ### Background
 The Pymaceuticals, Inc., a new pharmaceutical company that specializes in anti-cancer medications; recently began screening for potential treatments for squamous cell carcinoma (SCC), a commonly occurring form of skin cancer.
@@ -72,4 +72,11 @@ The p-value (calculated as 0.00) is a measure of the statistical significance of
 A lower standard error indicates a more precise estimate of the slope. In this case, a standard error of 0.13 suggests a relatively low variability and a relatively precise estimate of the slope in the Capomulin regimen.
 
 However, it’s important to note that correlation does not imply causation, and other factors may also be influencing the relationship between mouse weight and tumor volume. Further analysis and experimentation would be needed to establish causality and make definitive conclusions.
+
+### Tools Used
+- Matplotlib
+- Pandas
+- SciPy
+- NumPy
+- Jupyter Notebook
 
