@@ -1,4 +1,4 @@
-# Matplotlib-Challenge: Pymaceuticals SCC Study Analysis
+# Analyzing SCC Treatment Study by Pymaceuticals
 Welcome to the Matplotlib Challenge, a class assignment for my Data Analytics BootCamp at Washignton University. In this project, I will analyze the results of an animal study by Pymaceuticals. The study is focused on potential treatments for squamous cell carcinoma (SCC), a common type of skin cancer. The task is to perform a comprehensive analysis of the study's data and generate essential tables and figures for the technical report. This project will showcase data analytics skills and ability to derive meaningful insights from complex data.
 
 ### Background
